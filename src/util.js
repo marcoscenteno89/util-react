@@ -1,3 +1,5 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { CLS } from './classes.js';
 
 class cls extends Array {
   constructor(...args) {
@@ -19,3 +21,5 @@ class cls extends Array {
     return this;
   }
 }
+
+export { Square, Loading };

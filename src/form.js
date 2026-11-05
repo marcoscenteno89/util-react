@@ -1,3 +1,7 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { Loading } from './util';
+import { Form, Button } from 'react-bootstrap';
+
 const Input = (props) => {
   const ref = useRef(null);
   const [ label ] = useState(capitalize(props.name.replace(/_/g, ' ')));
@@ -92,3 +96,5 @@ const WebForm = (props) => {
     </Loading>
   )
 }
+
+export { WebForm as Form, LabelInput, Input };

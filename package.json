@@ -1,16 +1,32 @@
 {
-  "name": "util-react",
+  "name": "@marccent/util-react",
   "version": "1.0.0",
   "description": "Utility components for react.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "type": "module",
   "scripts": {
-    "build": "babel src -d dist",
-    "prepublishOnly": "npm run build"
+    "build": "rollup -c"
   },
   "author": "Marcos Centeno",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.21.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
+  },
+  "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "react-bootstrap": "^2.10.4"
   }
 }
